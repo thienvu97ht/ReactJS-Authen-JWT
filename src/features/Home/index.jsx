@@ -3,7 +3,11 @@ import React from "react";
 HomeFeature.propTypes = {};
 
 function HomeFeature(props) {
-  return <div>Home</div>;
+  return (
+    <div>
+      <p>Home</p>
+    </div>
+  );
 }
 
 export default HomeFeature;

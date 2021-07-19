@@ -2,7 +2,7 @@ import axios from "axios";
 import queryString from "query-string";
 
 const axiosClient = axios.create({
-  baseURL: "http://127.0.0.1:8022/",
+  baseURL: "http://127.0.0.1:8888/",
   headers: {
     "Content-Type": "application/json",
   },
@@ -10,7 +10,7 @@ const axiosClient = axios.create({
 });
 
 axiosClient.interceptors.request.use(async (config) => {
-  const accessToken = localStorage.getItem("accsess_token");
+  const accessToken = localStorage.getItem("access_token");
   if (accessToken) {
     config.headers.Authorization = `Bearer ${accessToken}`;
   }
